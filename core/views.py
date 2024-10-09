@@ -11,5 +11,5 @@ def login(request):
 def createUser(request):
     return render(request, "create_user.html")
 
-def solicitudForm(request):
-    return render(request, "form.html")
+def retiroResiduos(request):
+    return render(request, "retiro_residuos.html")

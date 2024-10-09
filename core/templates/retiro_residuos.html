@@ -1,0 +1,58 @@
+{% extends "plantilla.html" %}
+{% load static %}
+
+{% block 'estilo' %}
+<link rel="stylesheet" href="{% static 'css/retiro_residuos.css' %}">
+{% endblock %}
+{% block 'contenido' %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro de residuos urbanos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a>Blogs</a></li>
+                <li><a>Proyectos</a></li>
+                <li><a>Solicitar retiro</a></li>
+                <li><a>Quiénes somos</a></li>
+                <li><a>Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Solicitar retiro de residuos urbanos</h1>
+            <form>
+                <div>
+                    <label>Cantidad de residuos (En mt^3):</label>
+                    <input type="number" placeholder="Ej: 5">
+                    <span>mt^3</span>
+                </div>
+                <div>
+                    <label>Dirección:</label>
+                    <input type="text" placeholder="Ej: Avenida Siempre Viva 1999">
+                </div>
+                <div>
+                    <label>Tipo de residuo:</label>
+                    <select>
+                        <option>Seleccione un tipo de residuo</option>
+                        <option>Organico</option>
+                        <option>No organico</option>
+                        <option>Biodegradable</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Descripción de la solicitud:</label>
+                    <textarea>Escriba aquí los detalles de los residuos.</textarea>
+                </div>
+                <button>Enviar solicitud</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
