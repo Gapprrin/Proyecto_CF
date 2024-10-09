@@ -1,0 +1,110 @@
+section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #CECECE;
+}
+
+.info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    background-color: var(--back-light-solid-color);
+}
+
+p{
+    font-size: 1.6rem;
+    text-align: center;
+    width: 35%;
+    margin-left: 30px;
+}
+
+/* ventajas e imagen camión */
+.desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 65%;
+    width: 100%;
+    img{
+        height: 20%;
+    };
+}
+
+#informacion{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 45%;
+    justify-content: center;
+}
+
+.listado{
+    font-size: 1.3rem;
+    text-align: left;
+    width: 100%;
+    margin-left: 30px;
+    /* Para modificar el espaciado entre lineas, pero modifica el largo de la selección */
+    line-height: 1.5;
+    /* Para modiciar el espaciado entre letras 
+    letter-spacing: 10px; */
+}
+
+#imagen-camion{
+    display: flex;
+    height: 100%;
+    width: 55%;
+    img{
+        height: inherit;
+        width: 100%;
+    };
+}
+
+/* section 2 */
+
+#solicitar-retiro{
+    height: 100vh;
+    width: 100%;
+    border: none;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    p{
+        width: 90%;
+        letter-spacing: 10px;
+    }
+}
+
+#aqui-btn{
+    height: 4rem;
+    width: 300px;
+    font-size: 3rem;
+    border-radius: 8px;
+    background-color: var(--color-title-btn);
+    border: 2px solid #2C2C2C;
+    color: #fff;
+    transition: .2s;
+    cursor: pointer;
+}
+
+#aqui-btn:hover{
+    background-color: #cce3a7;
+    color: #2C2C2C;
+}
+
+.imagen-personas{
+    background-image: url('/static/img/people.jpg');
+    height: 60%;
+    width: 100%;
+    background-repeat: none;
+    background-size: cover;
+}

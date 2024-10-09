@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retiro residuos</title>
     <link rel="stylesheet" href="{%static 'css/plantilla.css'%}">
+    {% block 'estilo' %}
+    {% endblock %}
 </head>
 <body>
     <!-- HEADER -->
      <header>
         <div class="header-container">
             <div class="titulo">
-                <strong>Retiro de residuos urbanos</strong>
+                <a href="{% url 'home' %}" style="text-decoration: none;"><strong>Retiro de residuos urbanos</strong></a>
             </div>
             <div class="links">
                 <div>
-                    <a href="generar_solicitud">Solicitar retiro</a>
+                    <a href="{% url 'generar_solicitud' %}">Solicitar retiro</a>
 
                     <a href="#">Sobre nosotros</a>
 
-                    <a href="login">Iniciar sesión</a>
+                    <a href="{% url 'login' %}">Iniciar sesión</a>
                 </div>
             </div>
         </div>
@@ -29,5 +31,9 @@
 
     {% block 'contenido' %}
     {% endblock %}
+
+    <footer>
+        
+    </footer>
 </body>
 </html>
