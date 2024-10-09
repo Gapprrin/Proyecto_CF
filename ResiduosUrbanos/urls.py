@@ -21,4 +21,7 @@ from core.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('login/', login, name='login'),
+    path('create_user/', createUser, name='create_user'),
+    path('generar_solicitud/', solicitudForm, name='generar_solicitud'),
 ]

@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro residuos</title>
+    <link rel="stylesheet" href="{%static 'css/plantilla.css'%}">
+</head>
+<body>
+    <!-- HEADER -->
+     <header>
+        <div class="header-container">
+            <div class="titulo">
+                <strong>Retiro de residuos urbanos</strong>
+            </div>
+            <div class="links">
+                <div>
+                    <a href="generar_solicitud">Solicitar retiro</a>
+
+                    <a href="#">Sobre nosotros</a>
+
+                    <a href="login">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+     </header>
+
+    {% block 'contenido' %}
+    {% endblock %}
+</body>
+</html>
