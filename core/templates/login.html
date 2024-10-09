@@ -1,1 +1,34 @@
 {% extends 'plantilla.html' %}
+{% load static %}
+
+{% block 'estilo' %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block 'contenido' %}
+
+    <section>
+        <div class="login">
+            <div class="login-titulo">
+                <strong>Iniciar sesión</strong>
+            </div>
+            <div class="login-form">
+                <form action="#">
+                    <label for="user">Correo o nombre de usuario:</label>
+                    <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user">
+                    <label for="pass">Contraseña:</label>
+                    <input type="password" placeholder="********" name="pass">
+                    <div class="check-reset">
+                        <label for="recordarme">
+                            <input type="checkbox" name="recordarme" id="recordarme" >
+                            Recordarme
+                        </label>
+                        <a href="#">Olvidaste tu contraseña?</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

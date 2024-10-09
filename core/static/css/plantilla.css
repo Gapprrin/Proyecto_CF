@@ -47,7 +47,7 @@ header{
 
 .links{
     display: flex;
-    width: 30%;
+    width: 40%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,11 @@ header{
         a{
             text-decoration: none;
             color: #49454F;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            svg{
+                transform: translate(0, 20%);
+                fill: #49454F;
+            }
         }
     }
 }
