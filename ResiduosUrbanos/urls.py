@@ -23,5 +23,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('login/', login, name='login'),
     path('create_user/', createUser, name='create_user'),
-    path('generar_solicitud/', solicitudForm, name='generar_solicitud'),
+    path('retiro_residuos/', retiroResiduos, name='retiro_residuos'),
 ]
