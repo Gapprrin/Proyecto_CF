@@ -5,54 +5,44 @@
 <link rel="stylesheet" href="{% static 'css/retiro_residuos.css' %}">
 {% endblock %}
 {% block 'contenido' %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retiro de residuos urbanos</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a>Blogs</a></li>
-                <li><a>Proyectos</a></li>
-                <li><a>Solicitar retiro</a></li>
-                <li><a>Quiénes somos</a></li>
-                <li><a>Iniciar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Solicitar retiro de residuos urbanos</h1>
-            <form>
-                <div>
-                    <label>Cantidad de residuos (En mt^3):</label>
-                    <input type="number" placeholder="Ej: 5">
-                    <span>mt^3</span>
-                </div>
-                <div>
-                    <label>Dirección:</label>
-                    <input type="text" placeholder="Ej: Avenida Siempre Viva 1999">
-                </div>
-                <div>
-                    <label>Tipo de residuo:</label>
-                    <select>
-                        <option>Seleccione un tipo de residuo</option>
-                        <option>Organico</option>
-                        <option>No organico</option>
-                        <option>Biodegradable</option>
-                        <option>Otro</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Descripción de la solicitud:</label>
-                    <textarea>Escriba aquí los detalles de los residuos.</textarea>
-                </div>
-                <button>Enviar solicitud</button>
-            </form>
+        <section id="cuerpo">
+            <section id="formulario">
+                <form>
+                    <h2>Solicitar retiro de residuos urbanos</h2>
+                    
+                    <div id="residuoDireccion">
+                        <div id="residuo">
+                            <h3>Cantidad de residuos (En mt^3):</h3>
+                            <input type="number" placeholder="Ej: 5">
+                        </div>
+                        <div id="direccion">
+                            <h3>Dirección:</h3>
+                            <input type="text" placeholder="Ej: Avenida Siempre Viva 1999">
+                        </div>
+                    </div>
+
+                    <div id="tipoResiduo">
+                       <div>    
+                        <h3>Tipo de residuo:</h3>
+                        <select id="opciones" aria-placeholder="">
+                            <option>Seleccione un tipo de residuo</option>
+                            <option>Organico</option>
+                            <option>No organico</option>
+                            <option>Biodegradable</option>
+                            <option>Otro</option>
+                        </select>
+                       </div>
+                        <img src="{% static 'img/formulario.png' %}" alt="imagen-formulario">
+                    </div>
+
+                    <div id="descripcion">
+                        <h3>Descripción de la solicitud:</h3>
+                        <input type="text" placeholder="Escriba aquí los detalles de los residuos.">
+                    </div>
+                    
+                    <button>Enviar solicitud</button>
+                </form>
+            </section>
         </section>
-    </main>
-</body>
-</html>
+
+{% endblock %}
