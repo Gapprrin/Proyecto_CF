@@ -67,3 +67,32 @@ input{
 input::placeholder{
     color: var(--placeholder-text);
 }
+
+#boton{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: #34C759;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+a{
+    text-decoration: none;
+}
+
+#registrase{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#linkRegistrarse {
+    color: rgb(183, 0, 0);
+  }

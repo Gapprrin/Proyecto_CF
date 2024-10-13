@@ -13,3 +13,12 @@ def createUser(request):
 
 def retiroResiduos(request):
     return render(request, "retiro_residuos.html")
+
+def registrarse(request):
+    return render(request, 'registrarse.html')
+
+def pagAdmin(request):
+    return render(request, 'pagAdmin.html')
+
+def historial(request):
+    return render(request, 'historial.html')

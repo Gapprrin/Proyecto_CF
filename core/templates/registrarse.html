@@ -10,30 +10,27 @@
     <section>
         <div class="login">
             <div class="login-titulo">
-                <strong>Iniciar sesión</strong>
+                <strong>Crear Cuenta</strong>
             </div>
             <div class="login-form">
                 <form action="#">
-                    <label for="user">Correo o nombre de usuario:</label>
+                    <label for="user">Nombre:</label>
+                    <input type="text" placeholder="EJ: Alexander" name="user">
+                    <label for="user">Correo:</label>
                     <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user">
                     <label for="pass">Contraseña:</label>
+                    <input type="password" placeholder="Debe incluir mayusculas y un simbolo." name="pass">
+                    <label for="pass">Repetir contraseña:</label>
                     <input type="password" placeholder="********" name="pass">
-                    <div class="check-reset">
-                        <label for="recordarme">
-                            <input type="checkbox" name="recordarme" id="recordarme" >
-                            Recordarme
-                        </label>
-                        <a href="#">Olvidaste tu contraseña?</a>
-                    </div>
 
                     <div id="boton">
-                        <a  href="{% url 'home' %}">
-                            <button type="button">Iniciar Sesión</button>
+                        <a  href="{% url 'login' %}">
+                            <button type="button">Crear cuenta</button>
                         </a>    
                     </div>
 
                     <div id="registrase">
-                        <p>¿no tienes cuenta? <a id="linkRegistrarse" href="{% url 'registrarse' %}"> Crea una aquí.</a></p>
+                        <p>¿Ya tienes una cuenta?<a id="linkRegistrarse" href="{% url 'login' %}"> Haz click aquí.</a></p>
                     </div>
                     
                 </form>
