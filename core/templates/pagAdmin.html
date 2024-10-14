@@ -1,11 +1,12 @@
-{% extends "plantilla.html" %}
-{% load static %} 
+{% extends 'plantilla.html' %}
+{% load static %}
 
-{% block estilo_admin %}
+{% block 'estilo' %}
     <link rel="stylesheet" href="{% static 'css/pagAdmin.css' %}">
 {% endblock %}
 
-{% block contenido %}
+{% block 'contenido' %}
+
 <div class="admin-container">
     <h1>Página del Administrador ONG</h1>
     <div class="asignar-recursos">
