@@ -1,0 +1,64 @@
+{% extends "plantilla.html" %}
+{% load static %} 
+
+{% block estilo_admin %}
+    <link rel="stylesheet" href="{% static 'css/pagAdmin.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<div class="admin-container">
+    <h1>Página del Administrador ONG</h1>
+    <div class="asignar-recursos">
+        <h2>Asignar recursos</h2>
+        <p>Aquí podrás asignar recursos y las rutas</p>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="tipo-residuo">Tipo de residuo</label>
+                <select id="tipo-residuo" name="tipo-residuo">
+                    <option value="">Seleccione un tipo</option>
+                    <option value="plastico">Plástico</option>
+                    <option value="papel">Papel</option>
+                    <option value="vidrio">Vidrio</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rutas">Rutas</label>
+                <input type="text" id="rutas" name="rutas" placeholder="Valor">
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" placeholder="Valor">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Valor"></textarea>
+            </div>
+            <button type="submit">Solicitar recolección</button>
+        </form>
+        <button class="mostrar-rutas">Mostrar rutas más óptimas</button>
+    </div>
+
+    <div class="contactos">
+        <h2>Contactos</h2>
+        <ul>
+            <li>Usuario 1</li>
+            <li>Usuario 2</li>
+            <li>Usuario 3</li>
+            <li>Usuario 4</li>
+            <li>Usuario 5</li>
+            <li>Usuario 6</li>
+            <li>Usuario 7</li>
+            <li>Usuario 8</li>
+            <li>Usuario 9</li>
+            <li>Usuario 10</li>
+            <li>Usuario 11</li>
+            <li>Usuario 12</li>
+        </ul>
+    </div>
+
+    <div class="icono-reciclaje">
+        <img src="{% static 'img/reciclar-cemento.png' %}" alt="Icono de reciclaje">
+    </div>
+</div>
+{% endblock %}

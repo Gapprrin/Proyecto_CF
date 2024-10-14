@@ -1,0 +1,87 @@
+
+.admin-container {
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background: #ffffff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+.admin-container h1 {
+    font-size: 32px;
+    color: #333; 
+    margin-bottom: 20px; 
+}
+
+.admin-container h2 {
+    font-size: 28px; 
+    color: #555; 
+    margin-bottom: 15px;
+}
+
+.admin-container p {
+    color: #777; 
+    margin-bottom: 20px; 
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+.form-group textarea {
+    resize: vertical; 
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+.contactos {
+    margin-top: 30px; 
+}
+
+.contactos ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+.contactos li {
+    padding: 10px 0; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.icono-reciclaje {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.icono-reciclaje img {
+    width: 100px; 
+}
