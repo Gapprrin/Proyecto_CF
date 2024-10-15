@@ -12,7 +12,8 @@
     width: 100%;
     align-items: center;
 }
-#informacion{
+
+#informacionPerfil{
     width: 80%;
 }
 
@@ -31,4 +32,32 @@ h1{
     display: flex;
     align-items: center;
     margin-left: 1%;
+}
+
+#historial{
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    position: relative;
+}
+
+#cuerpo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40PX;
+}
+
+#informacionHistorial{
+    display: flex;
+    background-color: #E9E9E9;
+    width: 90%;
+    height: 12rem;
+    border-radius: 10px;
+    top: 30px;
+    position: absolute;
 }

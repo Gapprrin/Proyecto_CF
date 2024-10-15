@@ -8,16 +8,35 @@
 {% block 'contenido' %}
 
 <h1>Perfil e Historial</h1>       
-<section id="perfil">
-    <div id="imagenInformacion">
-        <img src="{% static 'img/perfil.png' %}" alt="foto de perfil">
-       
-        <div id="informacion">
-            <h4>Nombre de usuario</h4>
-            <input type="text"> 
+<section id="cuerpo">
+    <section id="perfil">
+        <div id="imagenInformacion">
+            <img src="{% static 'img/perfil.png' %}" alt="foto de perfil">
+           
+            <div id="informacionPerfil">
+                <h4>Nombre de usuario</h4>
+                <input type="text"> 
+            </div>
+            
         </div>
+    
+    </section>
+
+    <section id="historial">
         
-    </div>
+        <!-- falta por terminar -->
+        <div id="informacionHistorial">
+            <div id="residuoHistorial">
+                <h3>Cantidad de residuos (En mt^3):</h3>
+                <input type="number" placeholder="Ej: 5">
+            </div>
+            <div id="direccionHistorial">
+                <h3>Dirección:</h3>
+                <input type="text" placeholder="Ej: Avenida Siempre Viva 1999">
+            </div>
+        </div>
+    </section>    
 
 </section>
+
 {% endblock %}
