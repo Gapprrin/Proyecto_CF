@@ -7,17 +7,29 @@
 
 {% block 'contenido' %}
 
+
     <section>
+        <script>
+            window.addEventListener('DOMContentLoaded', function(){
+                document.querySelector("#id_username").placeholder = "EJ: alexander@gmail.com / Alexander"
+                document.querySelector("#id_password").placeholder = "***********"
+            })
+        </script>
+
         <div class="login">
             <div class="login-titulo">
                 <strong>Iniciar sesión</strong>
             </div>
             <div class="login-form">
-                <form action="#">
+                <form action="" method="post">
+                    {% csrf_token %}
+
                     <label for="user">Correo o nombre de usuario:</label>
-                    <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user">
+                    <!-- <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user"> -->
+                    {{ form.username }}
                     <label for="pass">Contraseña:</label>
-                    <input type="password" placeholder="********" name="pass">
+                    <!-- <input type="password" placeholder="********" name="pass"> -->
+                    {{ form.password }}
                     <div class="check-reset">
                         <label for="recordarme">
                             <input type="checkbox" name="recordarme" id="recordarme" >
@@ -27,9 +39,7 @@
                     </div>
 
                     <div id="boton">
-                        <a  href="{% url 'home' %}">
-                            <button type="button">Iniciar Sesión</button>
-                        </a>    
+                        <button type="submit">Iniciar Sesión</button>
                     </div>
 
                     <div id="registrase">

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.views import logout_then_login
 
 # Create your views here.
 
@@ -7,6 +8,9 @@ def home(request):
 
 def login(request):
     return render(request, "login.html")
+
+def logout(request):
+    return logout_then_login(request, 'login')
 
 def createUser(request):
     return render(request, "create_user.html")
