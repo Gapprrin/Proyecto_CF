@@ -57,9 +57,21 @@ h1{
     display: flex;
     background-color: #E9E9E9;
     width: 90%;
-    height: 12rem;
+    height: 14rem;
     border-radius: 10px;
     top: 30px;
     position: absolute;
     justify-content: space-around;
+}
+
+#cantidadDireccion{
+display: flex;
+width: 100%;
+justify-content: space-around;
+gap: 5rem;
+}
+
+#informacion{
+    display: flex;
+    flex-direction: column;
 }
