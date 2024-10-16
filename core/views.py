@@ -15,7 +15,17 @@ def logout(request):
     return logout_then_login(request, 'login')
 
 def retiroResiduos(request):
-    return render(request, "retiro_residuos.html")
+    if request.method == "POST":
+        registro = RegistroSolicitud(request.POST)
+        if registro.is_valid():
+            registro.save()
+            return
+    else:
+        registro = RegistroSolicitud()
+        
+    return render(request, "retiro_residuos.html", {"form" : registro})
+    # return render(request, "retiro_residuos.html")
+
 
 def registrarse(request):
     if request.method == "POST":

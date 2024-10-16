@@ -34,7 +34,14 @@ justify-content: center;
     justify-content: space-between;
     width: 72%;
     gap: 2%;
+    img{
+        width: 45%;
+    }
+    div{
+        width: 50%;
+    }
 }
+
 #descripcion{
     width: 72%;
     padding: 3rem;
@@ -53,12 +60,15 @@ form {
 form div {
     margin-bottom: 20px;
 }
-form input, form select {
+
+form input, form select, form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+
 
 form button {
     background-color: #34C759;
