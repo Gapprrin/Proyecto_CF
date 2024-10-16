@@ -11,16 +11,17 @@
     <h1>Página del Administrador ONG</h1>
     <div class="asignar-recursos">
         <h2>Asignar recursos</h2>
-        <p>Aquí podrás asignar recursos y las rutas</p>
+        <p>Aquí podrás asignar recursos y las rutas mas optimas</p>
         <form action="#" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 <label for="tipo-residuo">Tipo de residuo</label>
                 <select id="tipo-residuo" name="tipo-residuo">
                     <option value="">Seleccione un tipo</option>
-                    <option value="plastico">Plástico</option>
-                    <option value="papel">Papel</option>
-                    <option value="vidrio">Vidrio</option>
+                    <option value="plastico">Organico</option>
+                    <option value="papel">No organico</option>
+                    <option value="vidrio">Biodegradable</option>
+                    <option value="vidrio">Otro</option>
                 </select>
             </div>
             <div class="form-group">
@@ -36,30 +37,47 @@
                 <textarea id="descripcion" name="descripcion" placeholder="Valor"></textarea>
             </div>
             <button type="submit">Solicitar recolección</button>
+            <button class="mostrar-rutas">Mostrar rutas más óptimas</button>
         </form>
-        <button class="mostrar-rutas">Mostrar rutas más óptimas</button>
     </div>
 
     <div class="contactos">
         <h2>Contactos</h2>
-        <ul>
-            <li>Usuario 1</li>
-            <li>Usuario 2</li>
-            <li>Usuario 3</li>
-            <li>Usuario 4</li>
-            <li>Usuario 5</li>
-            <li>Usuario 6</li>
-            <li>Usuario 7</li>
-            <li>Usuario 8</li>
-            <li>Usuario 9</li>
-            <li>Usuario 10</li>
-            <li>Usuario 11</li>
-            <li>Usuario 12</li>
-        </ul>
+        <select name="Contactos" id="contacto">
+            <option value="Hola">Selecione el contacto a llamar</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 1</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 2</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 3</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 4</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 5</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 6</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 7</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 8</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 9</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 10</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 11</option>
+            <option value="Hola"><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 12</option>
+        </select>
+        <button>Llamar</button>
     </div>
 
     <div class="icono-reciclaje">
-        <img src="{% static 'img/reciclar-cemento.png' %}" alt="Icono de reciclaje">
+        <!-- <img src="{% static 'img/reciclar-cemento.png' %}" alt="Icono de reciclaje"> -->
     </div>
 </div>
 {% endblock %}
+
+<!-- <ul>           
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 1</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 2</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 3</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 4</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 5</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 6</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 7</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 8</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 9</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 10</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 11</li>
+    <li><img src="{% static 'img/contacto_icon.png' %}" alt="Icono de contactos" class="icon-contactos">Usuario 12</li>     
+</ul> -->

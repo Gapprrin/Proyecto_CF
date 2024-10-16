@@ -73,8 +73,10 @@ button:hover {
 }
 
 .contactos li {
-    padding: 10px 0; 
+    padding: 9px 0px; 
     border-bottom: 1px solid #ddd; 
+    display: flex;
+    align-items: center;
 }
 
 .icono-reciclaje {
@@ -84,4 +86,9 @@ button:hover {
 
 .icono-reciclaje img {
     width: 100px; 
+}
+
+.icon-contactos{
+    height: 3.5%;
+    width: 3.5%;
 }
