@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.views import logout_then_login
+from django.contrib.auth.forms import UserCreationForm
+from .forms import *
 
 # Create your views here.
 
@@ -12,14 +14,18 @@ def login(request):
 def logout(request):
     return logout_then_login(request, 'login')
 
-def createUser(request):
-    return render(request, "create_user.html")
-
 def retiroResiduos(request):
     return render(request, "retiro_residuos.html")
 
 def registrarse(request):
-    return render(request, 'registrarse.html')
+    if request.method == "POST":
+        registro = Registro(request.POST)
+        if registro.is_valid():
+            registro.save()
+            return redirect(to='login')
+    else:
+        registro = Registro()
+    return render(request, "registrarse.html", {"form" : registro})
 
 def pagAdmin(request):
     return render(request, 'pagAdmin.html')

@@ -13,20 +13,23 @@
                 <strong>Crear Cuenta</strong>
             </div>
             <div class="login-form">
-                <form action="#">
+                <form action="" method="post">
+                    {% csrf_token %}
                     <label for="user">Nombre:</label>
-                    <input type="text" placeholder="EJ: Alexander" name="user">
+                    <!-- <input type="text" placeholder="EJ: Alexander" name="user"> -->
+                     {{ form.username }}
                     <label for="user">Correo:</label>
-                    <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user">
+                    <!-- <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user"> -->
+                     {{ form.email }}
                     <label for="pass">Contraseña:</label>
-                    <input type="password" placeholder="Debe incluir mayusculas y un simbolo." name="pass">
+                    <!-- <input type="password" placeholder="Debe incluir mayusculas y un simbolo." name="pass"> -->
+                     {{ form.password1 }}
                     <label for="pass">Repetir contraseña:</label>
-                    <input type="password" placeholder="********" name="pass">
+                    <!-- <input type="password" placeholder="********" name="pass"> -->
+                     {{ form.password2 }}
 
                     <div id="boton">
-                        <a  href="{% url 'login' %}">
-                            <button type="button">Crear cuenta</button>
-                        </a>    
+                            <button type="submit">Crear cuenta</button>
                     </div>
 
                     <div id="registrase">
