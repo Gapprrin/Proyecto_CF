@@ -19,12 +19,11 @@ def retiroResiduos(request):
         registro = RegistroSolicitud(request.POST)
         if registro.is_valid():
             registro.save()
-            return
+            return render(request, "retiro_residuos.html", {"form" : registro})
     else:
         registro = RegistroSolicitud()
         
     return render(request, "retiro_residuos.html", {"form" : registro})
-    # return render(request, "retiro_residuos.html")
 
 
 def registrarse(request):
@@ -41,4 +40,5 @@ def pagAdmin(request):
     return render(request, 'pagAdmin.html')
 
 def historial(request):
-    return render(request, 'historial.html')
+    registros = SolicitudRetiro.objects.filter(usuario = request.user.id)
+    return render(request, 'historial.html', {"registros" : registros})

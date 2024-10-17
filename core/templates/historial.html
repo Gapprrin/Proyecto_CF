@@ -10,55 +10,79 @@
 <h1>Perfil e Historial</h1>       
 <section id="cuerpo">
     <section id="perfil">
-        <div id="imagenInformacion">
-            <img src="{% static 'img/perfil.png' %}" alt="foto de perfil">
-           
-            <div id="informacionPerfil">
-                <h4>Nombre de usuario</h4>
-                <label for="" type="text">pepito yañez</label> 
-            </div>
+        {% if request.user.is_authenticated %}
+            <div id="imagenInformacion">
+                <img src="{% static 'img/perfil.png' %}" alt="foto de perfil">
             
-        </div>
+                <div id="informacionPerfil">
+                    <h4>Nombre de usuario</h4>
+                    <label for="" type="text"><strong>{{ request.user.username }}</strong>
+                </div>
+                
+            </div>
+        {% else %}
+            <div id="imagenInformacion">
+                <img src="{% static 'img/perfil.png' %}" alt="foto de perfil">
+            
+                <div id="informacionPerfil">
+                    <h4>Nombre de usuario</h4>
+                    <label for="" type="text"><strong>Aquí irá tu nombre de usuario</strong>
+                </div>
+                
+            </div>
+        {% endif %}
     
     </section>
 
     <section id="historial">
         
         <!-- falta por terminar -->
+        {% for registro in registros %}
+
+
         <div id="informacionHistorial">
             <div id="numero">
-                <h2>1)</h2>
+                <h2>{{ registro.id }})</h2>
             </div>
             <div id="informacion">
 
                 <div id="cantidadDireccion">
                     <div>
                         <h3>Cantidad de residuos (En mt^3):</h3>
-                        <label type="number" placeholder="Ej: 5"> 5
+                        <label type="number" placeholder="Ej: 5"> {{ registro.cant_residuos }}
                      </div>
                      <div>
                         <h3>Dirección:</h3>
-                        <label for="" type="text">Avenida Siempre Viva 1999</label>      
+                        <label for="" type="text">{{ registro.direccion }}</label>      
                      </div>
                  </div>
      
                  <div id="descripcionHistorial">
                      <h3>Descripcion de solicitud:</h3>
-                     <label type="number" placeholder="Ej: 5"> Son escombros de una casa, estan cerca de un rio
+                     <label type="number" placeholder="Ej: 5"> {{ registro.descripcion }}
                  </div>
             </div>
             
             <div>
                 <div id="tipoHistorial">
                     <h3>Tipo de residuo:</h3>
-                    <label for="" type="text">Otro</label> 
+                    <label for="" type="text">{{ registro.tipo_residuo }}</label> 
                 </div>
                 <div id="destinoHistorial">
                     <h3>Dirección de destino:</h3>
-                    <label for="" type="text">Avenida Felicidad 2</label> 
+                    <label for="" type="text">Null</label> 
                 </div>
             </div>
         </div>
+        {% empty %}
+            <strong>Para empezar a ver el historial de solicitudes, debes <br> 
+                <hr>
+                <center>
+                    <a href="{% url 'login' %}" style="color: var(--color-title-btn)">iniciar sesión!</a>
+                </center>
+            </strong>
+
+        {% endfor %}
 
 
             <!-- <div id="residuoHistorial">

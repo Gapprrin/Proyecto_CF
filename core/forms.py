@@ -13,4 +13,4 @@ class RegistroSolicitud(forms.ModelForm):
 
     class Meta:
         model = SolicitudRetiro
-        fields = ("tipo_residuo", "cant_residuos", "direccion", "descripcion")
+        fields = ("tipo_residuo", "cant_residuos", "direccion", "descripcion", "usuario")

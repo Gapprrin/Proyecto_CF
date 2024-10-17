@@ -25,5 +25,5 @@ class SolicitudRetiro(models.Model):
     usuario = models.ForeignKey(to=User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.tipo_residuo
+        return self.tipo_residuo.nombre_residuo + " " + self.usuario.username
 

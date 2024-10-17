@@ -5,7 +5,14 @@
 <link rel="stylesheet" href="{% static 'css/retiro_residuos.css' %}">
 {% endblock %}
 {% block 'contenido' %}
+
     <section id="cuerpo">
+        <script>
+            window.addEventListener('DOMContentLoaded', function(){
+                document.querySelector("#id_usuario").value = "{{ request.user.id }}"
+                document.querySelector("#id_usuario").setAttribute("style", "display: none;")
+            })
+        </script>
         <section id="formulario">
             <form action="" method="post" >
                 
@@ -46,10 +53,17 @@
                     <!-- <input type="text" placeholder="Escriba aquí los detalles de los residuos."> -->
                      {{ form.descripcion }}
                 </div>
-                
-                <button>Enviar solicitud</button>
+
+                {{ form.usuario }}
+
+                {% if request.user.is_authenticated %}
+                    <button type="submit">Enviar solicitud</button>
+                {% else %}
+                    <button type="button" onclick="mostrarMensaje()">Enviar solicitud</button>
+                {% endif %}
             </form>
         </section>
     </section>
 
+    <script src="{% static 'JS/retiro_residuos.js' %}"></script>
 {% endblock %}
