@@ -1,39 +1,40 @@
-/* Contenedor principal para organizar admin y contactos */
 .container {
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
 }
 
-/* Estilos del contenedor principal del administrador */
 .admin-container {
-    flex: 1; /* Ocupa todo el espacio restante en el contenedor */
-    max-width: 1600px; 
-    margin: 20px; 
-    padding: 20px; 
-    background: #ffffff; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
+    flex: 1;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .admin-container h1 {
     font-size: 32px;
     color: #333; 
     margin-bottom: 20px; 
+    text-align: center;
 }
 
 .admin-container h2 {
     font-size: 28px; 
     color: #555; 
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .admin-container p {
     color: #777; 
     margin-bottom: 20px; 
+    text-align: center;
 }
 
-/* Estilos del formulario */
 .form-group {
     margin-bottom: 15px;     
 }
@@ -48,7 +49,7 @@
 .form-group select,
 .form-group textarea {
     resize: none;
-    width: 35%; /* Ajusta el ancho de los inputs, selects, y textareas */
+    width: 100%; 
     padding: 10px; 
     border: 1px solid #ddd; 
     border-radius: 4px; 
@@ -60,7 +61,6 @@
     resize: none;
 }
 
-/* Estilos de los botones */
 button {
     background-color: #4CAF50; 
     color: white; 
@@ -69,47 +69,55 @@ button {
     border-radius: 4px;
     cursor: pointer; 
     transition: background-color 0.3s; 
+    display: block; 
+    margin: 20px auto; 
 }
 
 button:hover {
     background-color: #45a049; 
 }
 
-/* Estilos del área de contactos */
 .contactos {
-    align-self: flex-start; /* Coloca los contactos en la parte superior derecha */
+    align-self: flex-start; 
     background: #f9f9f9;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
-    width: 300px; /* Ancho fijo de la sección de contactos */
+    width: 500px; 
+    min-width: 560px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactos select {
+    width: 100%; 
+    max-width: 300px; 
 }
 
 .contactos ul {
     list-style: none; 
-    padding: 0px; 
+    padding: 0;
 }
 
 .contactos li {
-    padding: 9px 0px; 
-    border-bottom: 1px solid #ddd; 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.contactos h2 {
+    margin-bottom: 15px; 
+}
+
+.rutas {
     display: flex;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 1px; 
 }
 
-.contacto-icon {
-    height: 3.5%; 
-    width: 3.5%; 
-}
-
-.icono-reciclaje {
-    position: absolute; /* Mueve el logo fuera del flujo normal del documento */
-    top: 120px; /* Ajusta este valor según la altura de tu header */
-    left: 50%; /* Lo posiciona en el centro horizontal */
-    transform: translateX(-50%); /* Ajusta para centrar el logo en la página */
-}
-
-.icono-reciclaje img {
-    width: 200px; /* Tamaño del logo */
-    height: 200px; /* Tamaño del logo */
+.rutas img {
+    width: 100px; 
+    height: auto; 
 }
