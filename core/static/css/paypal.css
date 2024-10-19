@@ -1,0 +1,17 @@
+section{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30rem;
+    width: 30rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+}

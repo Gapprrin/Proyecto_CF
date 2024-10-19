@@ -1,0 +1,9 @@
+.error, .errorlist{
+    color: rgb(183, 0, 0);
+    height: 1rem;
+    margin: 0px;
+}
+
+.errorlist > li{
+    color: rgb(183, 0, 0);
+}

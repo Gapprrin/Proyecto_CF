@@ -28,4 +28,5 @@ urlpatterns = [
     path('pagAdmin/', pagAdmin, name='pagAdmin'),
     path('historial/', historial, name='historial'),
     path('logout', logout, name="logout"),
+    path('pago/', paypal, name="pago"),
 ]

@@ -27,11 +27,13 @@
                     <label for="user">Correo o nombre de usuario:</label>
                     <!-- <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user"> -->
                     {{ form.username }}
+
                     <label for="pass">Contraseña:</label>
                     <!-- <input type="password" placeholder="********" name="pass"> -->
                     {{ form.password }}
+                    <p id="error">Usuario o contraseña incorrectos</p>
                     <div class="check-reset">
-                        <label for="recordarme">
+                        <label for="recordarme" style="display: flex; justify-content: center; align-items: center;">
                             <input type="checkbox" name="recordarme" id="recordarme" >
                             Recordarme
                         </label>
@@ -39,7 +41,7 @@
                     </div>
 
                     <div id="boton">
-                        <button type="submit">Iniciar Sesión</button>
+                        <button type="submit" onclick="validar()">Iniciar Sesión</button>
                     </div>
 
                     <div id="registrase">

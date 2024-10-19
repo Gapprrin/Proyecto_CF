@@ -3,6 +3,7 @@
 
 {% block 'estilo' %}
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registrarse.css' %}">
 {% endblock %}
 
 {% block 'contenido' %}
@@ -15,21 +16,26 @@
             <div class="login-form">
                 <form action="" method="post">
                     {% csrf_token %}
-                    <label for="user">Nombre:</label>
+                    <label for="user"></label>
                     <!-- <input type="text" placeholder="EJ: Alexander" name="user"> -->
-                     {{ form.username }}
+                    {{ form.username }}
+                    {{ form.errors.username }}
+                    <p class="error" id="error-user"></p>
                     <label for="user">Correo:</label>
                     <!-- <input type="text" placeholder="EJ: alexander@gmail.com / Alexander" name="user"> -->
-                     {{ form.email }}
+                    {{ form.email }}
+                    <p class="error" id="error-email"></p>
                     <label for="pass">Contraseña:</label>
                     <!-- <input type="password" placeholder="Debe incluir mayusculas y un simbolo." name="pass"> -->
-                     {{ form.password1 }}
+                    {{ form.password1 }}
+                    <p class="error" id="error-password1"></p>
                     <label for="pass">Repetir contraseña:</label>
                     <!-- <input type="password" placeholder="********" name="pass"> -->
-                     {{ form.password2 }}
+                    {{ form.password2 }}
+                    <p class="error" id="error-password2"></p>
 
                     <div id="boton">
-                            <button type="submit">Crear cuenta</button>
+                            <button type="submit" onclick="validarCreacionCuenta()">Crear cuenta</button>
                     </div>
 
                     <div id="registrase">
@@ -40,5 +46,6 @@
             </div>
         </div>
     </section>
+    <script src="{% static 'JS/registrarse.js' %}"></script>
 
 {% endblock %}

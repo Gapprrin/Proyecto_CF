@@ -6,7 +6,7 @@ section{
 
 .login{
     display: flex;
-    height: 79vh;
+    height: 90vh;
     width: 30.5vw;
     flex-direction: column;
     justify-content: space-between;
@@ -95,4 +95,10 @@ a{
 
 #linkRegistrarse {
     color: rgb(183, 0, 0);
-  }
+}
+
+#error{
+    display: none;
+    color: rgb(183, 0, 0);
+    margin: 0px 0px;
+}

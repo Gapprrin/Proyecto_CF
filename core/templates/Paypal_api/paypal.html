@@ -1,0 +1,23 @@
+{% extends 'plantilla.html' %}
+{% load static %}
+
+{% block 'estilo' %}
+    <link rel="stylesheet" href="{% static 'css/paypal.css' %}">
+{% endblock %}
+
+{% block 'contenido' %}
+<section>
+    <div class="content">
+        
+        <div>
+            <div id="paypal-button-container"></div>
+            <p id="result-message"></p>
+        </div>
+    </div>
+
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=test"
+        data-sdk-integration-source="developer-studio"></script>
+    <script src="{% static 'JS/app.js' %}"></script>
+</section>
+{% endblock %}

@@ -11,10 +11,14 @@
             window.addEventListener('DOMContentLoaded', function(){
                 document.querySelector("#id_usuario").value = "{{ request.user.id }}"
                 document.querySelector("#id_usuario").setAttribute("style", "display: none;")
+                document.querySelector("#id_cant_residuos").setAttribute("min", "1")
+                document.querySelector("#id_cant_residuos").setAttribute("value", "1.1")
+                document.querySelector("#id_cant_residuos").setAttribute("step", ".1")
+                document.querySelector("#id_cant_residuos").setAttribute("oninput", "validarCant()")
             })
         </script>
         <section id="formulario">
-            <form action="" method="post" >
+            <form action="" method="post">
                 
                 {% csrf_token %}
 
@@ -57,7 +61,8 @@
                 {{ form.usuario }}
 
                 {% if request.user.is_authenticated %}
-                    <button type="submit">Enviar solicitud</button>
+                    <button type="submit" id="menor">Enviar solicitud</button>
+                    <button type="button" id="mayor" style="display: none;">hola</button>
                 {% else %}
                     <button type="button" onclick="mostrarMensaje()">Enviar solicitud</button>
                 {% endif %}

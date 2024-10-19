@@ -47,7 +47,16 @@ def historial(request):
     registros = SolicitudRetiro.objects.filter(usuario = request.user.id)
     return render(request, 'historial.html', {"registros" : registros})
 
-def error_404(request, exception):
-    return render(request, 'Error/error_404.html', status=404)
+def paypal(request):
+    return render(request, 'Paypal_api/paypal.html')
 
-handler404 = error_404
+
+
+
+
+# página de error
+
+def error_403(request, exception):
+    return render(request, 'Error/error_403.html', status=403)
+
+handler403 = error_403
