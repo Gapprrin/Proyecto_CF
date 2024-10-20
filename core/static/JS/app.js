@@ -7,7 +7,7 @@ window.paypal
             label: "checkout",
         },
         message: {
-            amount: 200,
+            amount: 20,
         } ,
 
         async createOrder() {
