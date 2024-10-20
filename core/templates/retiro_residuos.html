@@ -18,7 +18,7 @@
             })
         </script>
         <section id="formulario">
-            <form action="" method="post">
+            <form action="" method="post" id="formulario-residuo">
                 
                 {% csrf_token %}
 
@@ -62,7 +62,7 @@
 
                 {% if request.user.is_authenticated %}
                     <button type="submit" id="menor">Enviar solicitud</button>
-                    <button type="button" id="mayor" style="display: none;">hola</button>
+                    <button type="button" id="mayor" style="display: none;" onclick="pasarelaPago()">Enviar solicitud</button>
                 {% else %}
                     <button type="button" onclick="mostrarMensaje()">Enviar solicitud</button>
                 {% endif %}

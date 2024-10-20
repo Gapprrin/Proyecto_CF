@@ -1,13 +1,13 @@
 window.paypal
     .Buttons({
         style: {
-            shape: "rect",
+            shape: "pill",
             layout: "vertical",
-            color: "gold",
-            label: "paypal",
+            color: "silver",
+            label: "checkout",
         },
         message: {
-            amount: 100,
+            amount: 200,
         } ,
 
         async createOrder() {

@@ -3,6 +3,7 @@ from django.contrib.auth.views import logout_then_login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import *
 from .forms import *
+from .paypal_func import *
 
 # Create your views here.
 
@@ -27,6 +28,7 @@ def retiroResiduos(request):
     return render(request, "retiro_residuos.html", {"form" : registro})
 
 
+
 def registrarse(request):
     if request.method == "POST":
         registro = Registro(request.POST)
@@ -47,6 +49,8 @@ def historial(request):
     registros = SolicitudRetiro.objects.filter(usuario = request.user.id)
     return render(request, 'historial.html', {"registros" : registros})
 
+
+# Paypal API
 def paypal(request):
     return render(request, 'Paypal_api/paypal.html')
 

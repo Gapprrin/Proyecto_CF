@@ -17,3 +17,8 @@ function validarCant(){
         document.querySelector("#id_cant_residuos").value = 1
     }
 }
+
+function pasarelaPago(){
+    document.getElementById("formulario-residuo").submit();
+    window.location.href = '../pago/';
+}
