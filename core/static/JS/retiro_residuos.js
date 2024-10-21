@@ -22,3 +22,16 @@ function pasarelaPago(){
     document.getElementById("formulario-residuo").submit();
     window.location.href = '../pago/';
 }
+
+function mapa(){
+    let coordenadas = {lat: -33.6942128, lng: -71.2136897}
+    let map = new google.maps.Map(document.querySelector("#map"),
+    {
+        zoom: 20,
+        center: coordenadas
+    })
+    var marker = new google.maps.Marker({
+    position: coordenadas,
+    map: map
+  });
+}
