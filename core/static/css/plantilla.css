@@ -23,9 +23,7 @@ body{
 
 header{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    width: 108%;
     height: 4rem;
     background-color: var(--back-solid-color);
 }
@@ -34,6 +32,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
 }
 
 .titulo{
@@ -47,7 +46,7 @@ header{
 
 .links{
     display: flex;
-    width: 40%;
+    width: 60%;
     height: 100%;
     align-items: center;
     justify-content: center;
